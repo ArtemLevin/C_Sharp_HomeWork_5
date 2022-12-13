@@ -33,17 +33,21 @@ Console.WriteLine("The computer prints the array... ");
 Console.WriteLine(" ");
 PrintArray(array);
 
-int index = 0;
-int sum = 0;
-while(index < array.Length)
-{
-    if(index%2 != 0)
-    {
-        sum+=array[index];
-    }
-    index++;
-    
-}
 
+int Sum (int [] array)
+{
+    int index = 0;
+    int sum = 0;
+    while(index < array.Length)
+    {
+        if(index%2 != 0)
+        {
+            sum+=array[index];
+        }
+        index++;
+    
+    }
+    return sum;
+}
 Console.WriteLine(" ");
-Console.WriteLine("The sum of the elements standing in odd places in the array is "+ sum);
+Console.WriteLine("The sum of the elements standing in odd places in the array is "+ Sum(array));
