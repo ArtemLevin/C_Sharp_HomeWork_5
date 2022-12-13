@@ -10,7 +10,7 @@ double [] CreateArray(int number)
     int i = 0;
     while (i < number)
     {
-        array[i] = Math.Round(rnd.NextDouble(), 3);;
+        array[i] = new Random().Next(0, 100) + Math.Round(rnd.NextDouble(), 3);;
         i ++;
     }
     return array;
