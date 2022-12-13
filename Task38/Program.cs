@@ -35,23 +35,28 @@ Console.WriteLine("The computer prints the array... ");
 Console.WriteLine(" ");
 PrintArray(array);
 
-int index = 0;
-double max = array[0];
-double min = array[0];
-while(index < array.Length)
+
+double DifferenceMaxMin(double [] array)
 {
-    if(array[index] > max)
+    int index = 0;
+    double max = array[0];
+    double min = array[0];
+    double delta;
+    while(index < array.Length)
     {
-        max=array[index]; 
+        if(array[index] > max)
+        {
+            max=array[index]; 
+        }
+        if(array[index] < min)
+        {
+            min=array[index]; 
+        }
+        index++;
     }
-    if(array[index] < min)
-    {
-        min=array[index]; 
-    }
-    index++;
+
+    return delta = max - min;
 }
 
-double delta = max - min;
-
 Console.WriteLine(" ");
-Console.WriteLine("The difference between the largest value and the smallest value of the array is "+ delta);
+Console.WriteLine("The difference between the largest value and the smallest value of the array is "+ DifferenceMaxMin(array));
