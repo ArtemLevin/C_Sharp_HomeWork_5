@@ -33,17 +33,21 @@ Console.WriteLine("The computer prints the array... ");
 Console.WriteLine(" ");
 PrintArray(array);
 
-int index = 0; 
-int counter = 0;
-while(index < array.Length)
-{
-    if(array[index]%2 == 0)
-    {
-        counter++;
-    }
-    index++;
-}
 
+int EvenElements(int [] array)
+{
+    int index = 0; 
+    int counter = 0;
+    while(index < array.Length)
+    {
+        if(array[index]%2 == 0)
+        {
+         counter++;
+        }
+        index++;
+    }
+    return counter;
+}
 Console.WriteLine(" ");
-Console.WriteLine("The number of even elements in the array is "+ counter);
+Console.WriteLine("The number of even elements in the array is "+ EvenElements(array));
 
